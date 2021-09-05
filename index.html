@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>News Consumption Survey</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <meta charset="UTF-8">
+    </head>  
+<body>
+    <div class="header">
+      <h1 id="title">News Consumption Survey Form</h1>
+      <p id="description">Thank you for taking the time to fill out the form.</p>
+    </div>
+    <div class="content">
+      <form id="survey-form">
+          <div>
+              <p><label for="name" id="name-label">Name:</label</p><br>
+                <input type="name" name="name" pattern="[A-Za-z]{1,32}" maxlength="32" placeholder="Name" id="name" required/>
+          </div>
+          <div>
+              <p><label for="email" id="email-label">Email:</label></p>
+                <input type="email" id="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" maxlength="32" name="email" placeholder="Email" required/>
+          </div>
+          <div id="dropdown">
+            <p>What is your gender?</p>
+              <select id="gender" name="gender">
+                <option value="" disabled selected hidden>Please Choose...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="prefer not to say">Prefer not to say</option>
+              </select>
+          </div>
+          <div> 
+            <p><label for="number" id="number-label">Age</label></p>
+              <input type="number" id="number" name="number" min="1" max="100" placeholder="Age" required>
+          </div>
+          <div id="dropdown">
+            <p>What is the highest education level you have completed</p>
+              <select id="education" name="education">
+                <option value="" disabled selected hidden>Please Choose...</option>
+                <option value="below highschoool">Less than high school</option>
+                <option value="highschool">High school</option>
+                <option value="associate degree">Associate degree</option>
+                <option value="bachelor degree">Bachelor degree</option>
+                <option value="graduate degree">Graduate degree</option>
+              </select>
+          </div>
+          <div>
+            <p><label for="number" id="number-label">How many hours do you watch the news everyday?</label></p>
+              <input type="number" id="number" name="hours" min="1" max="24" placeholder="Hours">
+          </div>
+          <div>
+            <p>Where do you consume the news from?</p>
+              <ul class="checkbox">
+                <li> <input type="checkbox" name="Irrawady" value="yes">
+                <label for="Irrawady">Irrawady</label> </li>
+                <li><input type="checkbox" name="Khit Thit" value="yes">
+                <label for="Khit Thit">Khit Thit Media</label></li>
+                <li><input type="checkbox" name="Frontier" value="yes">
+                <label for="Frontier">Frontier</label></li>
+                <li><input type="checkbox" name="Myanmar Times" value="yes">
+                <label for="Myanmar Times">Myanmar Times</label></li>
+                <li><input type="checkbox" name="Facebook" value="yes">
+                <label for="Facebook">Facebook posts</label></li>
+                <li> <input type="checkbox" name="Twitter" value="yes">
+                <label for="Twitter">Twitter</label></li>
+                <li> <input type="checkbox" name="Foreign News" value="yes">
+                <label for="Foreign News">Foreign News Outlets</label></li>
+                <li><input type="checkbox" name="State-run Media" value="yes">
+                <label for="State-run Media">State-run Media</label></li>
+              </ul>
+          </div>
+          <div>
+            <p>How informed are you about the coup from the selected news outlet?</p>
+              <ul class="radio">
+                <li><input type="radio" id="extreame" name="informed" value="yes">
+                <label for="extreame">Extreamely informed</label></li>
+                <li> <input type="radio" id="very" name="informed" value="yes">
+                <label for="very">Very informed</label></li>
+                <li><input type="radio" id="somewhat" name="informed" value="yes">
+                <label for="somewhat">Somewhat informed</label></li>
+                <li><input type="radio" id="notso" name="informed" value="yes">
+                <label for="notso">Not so informed</label></li>
+                <li><input type="radio" id="notatall" name="informed" value="yes">
+                <label for="notatall">Not at all informed</label></li>
+          </div> 
+          <div>
+            <p>Any comment or suggestion:</p>
+              <textarea name="comments" id="comments">Type your comment here..</textarea>
+          </div>
+          <div>
+            <button type="submit" id="submit" value="Submit">Submit</button>
+          </div>
+    </form>
+</body>
+</html>
